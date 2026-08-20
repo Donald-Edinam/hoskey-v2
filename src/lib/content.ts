@@ -12,7 +12,7 @@ import { HERO_SLIDES } from "@/content/hero";
 import { SERVICES } from "@/content/services";
 import { PROCESS_STEPS } from "@/content/process";
 import { FAQS } from "@/content/faq";
-import { STUDIO_SPACES, STUDIO_TAGS } from "@/content/studio";
+import { STUDIO_SPACES, STUDIO_TAGS, STUDIO_FACILITIES, StudioFacility } from "@/content/studio";
 import { FOUNDER_STORY, HOSKEY_ACROSTIC, VALUES, MISSION, VISION } from "@/content/about";
 import { PROJECTS } from "@/content/projects";
 import { TEAM } from "@/content/team";
@@ -63,6 +63,10 @@ export async function getStudioTags(): Promise<string[]> {
   return STUDIO_TAGS;
 }
 
+export async function getStudioFacilities(): Promise<StudioFacility[]> {
+  return STUDIO_FACILITIES;
+}
+
 export async function getTestimonials(): Promise<Testimonial[]> {
   return TESTIMONIALS;
 }
@@ -78,3 +82,4 @@ export async function getAboutContent() {
 }
 
 export * from "@/content/types";
+export type { StudioFacility };
