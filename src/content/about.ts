@@ -1,5 +1,11 @@
 import { AcrosticItem } from "./types";
 
+export interface TimelineEntry {
+  date: string;
+  title: string;
+  description: string;
+}
+
 export const FOUNDER_STORY = {
   title: "Started small. Built to last.",
   paragraphs: [
@@ -11,6 +17,24 @@ export const FOUNDER_STORY = {
     role: "Founder & Creative Director",
   },
 };
+
+export const TIMELINE: TimelineEntry[] = [
+  {
+    date: "1 Dec 2024",
+    title: "Company Founded",
+    description: "Ziblim Abu James establishes Hoskey Production to bring professional broadcast standards to Ghanaian storytelling.",
+  },
+  {
+    date: "Jan 2025",
+    title: "Broadcast Unit Launch",
+    description: "Expanded into multi-camera live streaming, stage technical management, and corporate event broadcasting.",
+  },
+  {
+    date: "Feb 2025",
+    title: "Demes shr Studios Opening",
+    description: "Opened the physical podcast recording booth, workshop room, and creator co-working facility.",
+  },
+];
 
 export const HOSKEY_ACROSTIC: AcrosticItem[] = [
   { letter: "H", word: "Honesty", rest: "in storytelling" },

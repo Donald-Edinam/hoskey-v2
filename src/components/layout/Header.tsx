@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { Mark } from "./Mark";
 import { SocialIcons } from "./SocialIcons";
 import { MobileNav } from "@/components/interactive/MobileNav";
+import { getTeam } from "@/lib/content";
 
 export interface HeaderProps {
   isDarkHero?: boolean;
@@ -11,7 +12,7 @@ export interface HeaderProps {
   className?: string;
 }
 
-const NAV_LINKS = [
+const BASE_NAV_LINKS = [
   { label: "Home", href: "/#top" },
   { label: "What we do", href: "/#services" },
   { label: "Our work", href: "/#work" },
@@ -19,11 +20,19 @@ const NAV_LINKS = [
   { label: "Let's talk", href: "/#contact" },
 ];
 
-export function Header({
+export async function Header({
   isDarkHero = true,
   activePath = "/",
   className = "",
 }: HeaderProps) {
+  const team = await getTeam();
+  const navLinks = [...BASE_NAV_LINKS];
+
+  // S6 rule: nav item and route appear and disappear together
+  if (team && team.length >= 4) {
+    navLinks.splice(4, 0, { label: "Team", href: "/team" });
+  }
+
   return (
     <header
       className={`hdr ${!isDarkHero ? "bg-[var(--dark)] relative" : ""} ${className}`}
@@ -37,7 +46,7 @@ export function Header({
       <Container className="hdr__in">
         <Mark />
         <nav className="nav" aria-label="Primary">
-          {NAV_LINKS.map((link) => {
+          {navLinks.map((link) => {
             const isActive = activePath === link.href || (link.href === "/#top" && activePath === "/");
             return (
               <Link
@@ -51,7 +60,7 @@ export function Header({
           })}
         </nav>
         <SocialIcons />
-        <MobileNav navItems={NAV_LINKS} />
+        <MobileNav navItems={navLinks} />
       </Container>
     </header>
   );

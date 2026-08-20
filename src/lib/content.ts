@@ -13,7 +13,15 @@ import { SERVICES } from "@/content/services";
 import { PROCESS_STEPS } from "@/content/process";
 import { FAQS } from "@/content/faq";
 import { STUDIO_SPACES, STUDIO_TAGS, STUDIO_FACILITIES, StudioFacility } from "@/content/studio";
-import { FOUNDER_STORY, HOSKEY_ACROSTIC, VALUES, MISSION, VISION } from "@/content/about";
+import {
+  FOUNDER_STORY,
+  TIMELINE,
+  HOSKEY_ACROSTIC,
+  VALUES,
+  MISSION,
+  VISION,
+  TimelineEntry,
+} from "@/content/about";
 import { PROJECTS } from "@/content/projects";
 import { TEAM } from "@/content/team";
 import { TESTIMONIALS } from "@/content/testimonials";
@@ -71,9 +79,14 @@ export async function getTestimonials(): Promise<Testimonial[]> {
   return TESTIMONIALS;
 }
 
+export async function getTimeline(): Promise<TimelineEntry[]> {
+  return TIMELINE;
+}
+
 export async function getAboutContent() {
   return {
     founderStory: FOUNDER_STORY,
+    timeline: TIMELINE,
     acrostic: HOSKEY_ACROSTIC,
     values: VALUES,
     mission: MISSION,
@@ -82,4 +95,4 @@ export async function getAboutContent() {
 }
 
 export * from "@/content/types";
-export type { StudioFacility };
+export type { StudioFacility, TimelineEntry };
