@@ -5,6 +5,7 @@ import Image from "next/image";
 
 export interface VideoFacadeProps {
   videoId?: string;
+  videoSrc?: string;
   poster?: string;
   title?: string;
   className?: string;
@@ -12,16 +13,32 @@ export interface VideoFacadeProps {
 
 export function VideoFacade({
   videoId,
+  videoSrc,
   poster,
   title = "Play video",
   className = "",
 }: VideoFacadeProps) {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  if (!videoId) return null;
+  if (!videoId && !videoSrc) return null;
 
   if (isPlaying) {
-    const isYouTube = /^[a-zA-Z0-9_-]{11}$/.test(videoId);
+    if (videoSrc) {
+      return (
+        <div className={`relative aspect-video w-full overflow-hidden bg-black ${className}`}>
+          <video
+            src={videoSrc}
+            controls
+            autoPlay
+            className="w-full h-full object-cover"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      );
+    }
+
+    const isYouTube = Boolean(videoId && /^[a-zA-Z0-9_-]{11}$/.test(videoId));
     const iframeSrc = isYouTube
       ? `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`
       : `https://player.vimeo.com/video/${videoId}?autoplay=1`;

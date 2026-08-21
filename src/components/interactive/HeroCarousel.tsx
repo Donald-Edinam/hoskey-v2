@@ -150,7 +150,16 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
             className={`plate ${autoOK && isPlaying ? "is-on" : ""}`}
             data-plate
           >
-            {currentSlide.imageSrc ? (
+            {currentSlide.videoSrc ? (
+              <video
+                src={currentSlide.videoSrc}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            ) : currentSlide.imageSrc ? (
               <Image
                 src={currentSlide.imageSrc}
                 alt={currentSlide.imageAlt || "Hoskey Production"}
@@ -158,6 +167,7 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
                 sizes="(max-width: 768px) 100vw, 760px"
                 className="object-cover"
                 priority={currentIndex === 0}
+                loading={currentIndex === 0 ? "eager" : "lazy"}
               />
             ) : (
               <div className="plate__tex" />

@@ -24,6 +24,7 @@ export type Project = {
   approach?: string;
   outcome?: string;
   videoId?: string;
+  videoSrc?: string;
   poster?: string;
   gallery?: Img[];
   deliverables?: string[];
@@ -92,6 +93,7 @@ export type HeroSlide = {
   ctaContext: WaContext;
   imageSrc?: string;
   imageAlt?: string;
+  videoSrc?: string;
 };
 
 export type AcrosticItem = {

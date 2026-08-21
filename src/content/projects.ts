@@ -12,6 +12,7 @@ export const PROJECTS: Project[] = [
     brief: "The client required end-to-end multi-camera live coverage of the Lights of Africa concert, incorporating stage lighting, overhead jib camera crane shots, and real-time streaming feed.",
     approach: "Positioned a 30ft jib crane for sweeping audience-to-stage transitions, managed ISO recording via ATEM Mini Extreme ISO switcher, and routed master stereo mix from stage audio console.",
     outcome: "Broadcast delivered live to over 50,000 online viewers with zero dropouts and 4K master archive delivered next day.",
+    videoSrc: "/video/video_2026-08-21_00-54-21.mp4",
     poster: "/images/lights-of-africa.webp",
     gallery: [
       { src: "/images/lights-of-africa.webp", alt: "Arena stage with camera jib crane and LED screen" },
@@ -62,8 +63,9 @@ export const PROJECTS: Project[] = [
     brief: "Intimate studio sessions requiring high-fidelity multi-track audio recording and synchronized 4-camera video switching.",
     approach: "Utilized Demes shr Studios ATEM video switcher suite with direct multi-track ISO recording and real-time audio metering.",
     outcome: "High-quality acoustic session videos published to YouTube and Apple Music.",
-    poster: "/images/switcher-monitor.webp",
+    poster: "/images/studio-interior.webp",
     gallery: [
+      { src: "/images/studio-interior.webp", alt: "Demes shr Studio podcast & music set" },
       { src: "/images/switcher-monitor.webp", alt: "ATEM multi-cam switcher display" },
       { src: "/images/control-room-beam.webp", alt: "Studio control room setup" },
       { src: "/images/ziblim-gimbal-1.webp", alt: "Gimbal camera operator in studio" },

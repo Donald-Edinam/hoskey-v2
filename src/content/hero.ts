@@ -7,6 +7,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     lede: "Television, brand films, documentaries and live broadcasts - from concept development through to final delivery.",
     ctaLabel: "Talk about a shoot",
     ctaContext: "project",
+    videoSrc: "/video/video_2026-08-21_00-54-21.mp4",
     imageSrc: "/images/hero-1.webp",
     imageAlt: "Ziblim Abu James operating broadcast camera gimbal on set",
   },
@@ -25,7 +26,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     lede: "Podcast and recording studio, co-working and workshop space - bookable by the hour or by the day.",
     ctaLabel: "Book studio time",
     ctaContext: "studio",
-    imageSrc: "/images/control-room-beam.webp",
-    imageAlt: "Hoskey Production control room setup with live switching desk",
+    imageSrc: "/images/studio-interior.webp",
+    imageAlt: "Demes shr Studios podcast suite and recording studio",
   },
 ];
