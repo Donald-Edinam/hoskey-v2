@@ -90,7 +90,8 @@ export type HeroSlide = {
   lede: string;
   ctaLabel: string;
   ctaContext: WaContext;
-  image?: string;
+  imageSrc?: string;
+  imageAlt?: string;
 };
 
 export type AcrosticItem = {

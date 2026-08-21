@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Section } from "@/components/ui/Section";
@@ -68,11 +69,13 @@ export default async function AboutPage() {
 
               <div>
                 <Frame ratio="r45" label="Founder & Creative Director">
-                  <div className="w-full h-full bg-gradient-to-br from-[#1b1917] to-[#0d0c0b] flex items-center justify-center p-8 text-center text-[var(--on-dark-2)]">
-                    <span className="text-xs font-bold uppercase tracking-[0.14em]">
-                      Ziblim Abu James (Demes shr)
-                    </span>
-                  </div>
+                  <Image
+                    src="/images/about-founder.webp"
+                    alt="Ziblim Abu James (Demes shr)"
+                    fill
+                    sizes="(max-width: 900px) 100vw, 500px"
+                    className="object-cover"
+                  />
                 </Frame>
                 <div className="mt-4 pt-4 border-t border-[var(--rule)]">
                   <b className="block text-base font-bold text-[var(--ink)]">

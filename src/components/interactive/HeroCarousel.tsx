@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import Image from "next/image";
 import { HeroSlide } from "@/lib/content";
 import { Button } from "@/components/ui/Button";
 import { waLink } from "@/lib/whatsapp";
@@ -149,7 +150,18 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
             className={`plate ${autoOK && isPlaying ? "is-on" : ""}`}
             data-plate
           >
-            <div className="plate__tex" />
+            {currentSlide.imageSrc ? (
+              <Image
+                src={currentSlide.imageSrc}
+                alt={currentSlide.imageAlt || "Hoskey Production"}
+                fill
+                sizes="(max-width: 768px) 100vw, 760px"
+                className="object-cover"
+                priority={currentIndex === 0}
+              />
+            ) : (
+              <div className="plate__tex" />
+            )}
             <span className="plate__lbl" data-plabel>
               Slide 0{currentIndex + 1}
             </span>

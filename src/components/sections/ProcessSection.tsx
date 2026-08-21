@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -27,8 +28,24 @@ export function ProcessSection() {
         </div>
 
         <div className="proc__media">
-          <Frame ratio="r45" label="On set" />
-          <Frame ratio="r11" label="In edit" />
+          <Frame ratio="r45" label="On set - Live Direction">
+            <Image
+              src="/images/director-pointing.webp"
+              alt="Hoskey Production stage director pointing on set"
+              fill
+              sizes="(max-width: 768px) 100vw, 400px"
+              className="object-cover"
+            />
+          </Frame>
+          <Frame ratio="r11" label="In edit - Multi-Cam Switcher">
+            <Image
+              src="/images/switcher-monitor.webp"
+              alt="ATEM Mini Extreme multi-camera video switcher monitor"
+              fill
+              sizes="(max-width: 768px) 100vw, 400px"
+              className="object-cover"
+            />
+          </Frame>
         </div>
       </Container>
     </Section>

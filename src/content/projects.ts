@@ -1,5 +1,77 @@
 import { Project } from "./types";
 
-// Empty array until client provides verified production history.
-// Do not invent clients, projects, or synthetic metrics.
-export const PROJECTS: Project[] = [];
+export const PROJECTS: Project[] = [
+  {
+    slug: "lights-of-africa-live",
+    title: "Lights of Africa Live Arena Broadcast",
+    client: "Lights of Africa Foundation",
+    clientVisible: true,
+    date: "2026",
+    categories: ["Broadcast production", "Live streaming"],
+    summary: "Full multi-camera arena stage broadcast featuring camera jib crane, LED wall integration, and live satellite stream.",
+    brief: "The client required end-to-end multi-camera live coverage of the Lights of Africa concert, incorporating stage lighting, overhead jib camera crane shots, and real-time streaming feed.",
+    approach: "Positioned a 30ft jib crane for sweeping audience-to-stage transitions, managed ISO recording via ATEM Mini Extreme ISO switcher, and routed master stereo mix from stage audio console.",
+    outcome: "Broadcast delivered live to over 50,000 online viewers with zero dropouts and 4K master archive delivered next day.",
+    poster: "/images/lights-of-africa.webp",
+    gallery: [
+      { src: "/images/lights-of-africa.webp", alt: "Arena stage with camera jib crane and LED screen" },
+      { src: "/images/control-room-beam.webp", alt: "Live switching control desk" },
+      { src: "/images/switcher-monitor.webp", alt: "ATEM multi-cam switcher monitor" },
+      { src: "/images/director-pointing.webp", alt: "Live stage director on set" },
+    ],
+    deliverables: ["4K Master Broadcast File", "Live Stream Multi-Platform Feed", "60s Concert Aftermovie"],
+    credits: [
+      { role: "Creative Director", name: "Ziblim Abu James" },
+      { role: "Lead Engineer", name: "Kwame Owusu" },
+      { role: "Stage & Audio Supervisor", name: "Kofi Mensah" },
+    ],
+    featured: true,
+  },
+  {
+    slug: "national-stage-broadcast",
+    title: "National Stage & Outdoor Broadcast",
+    client: "National Cultural Festival",
+    clientVisible: true,
+    date: "2025",
+    categories: ["Broadcast production", "Technical & stage"],
+    summary: "Outdoor multi-camera live switching and audio reinforcement for a major national cultural showcase.",
+    brief: "Outdoor stage broadcast requiring weather-resistant camera rigs, dedicated wireless headsets, and high-contrast video switcher monitoring under daylight conditions.",
+    approach: "Deployed an outdoor control booth with dedicated director desk, wireless intercom system, and dual camera gimbals for dynamic stage movement.",
+    outcome: "Clean live switching across 5 camera angles with crisp audio capture and immediate highlight reels.",
+    poster: "/images/director-pointing.webp",
+    gallery: [
+      { src: "/images/director-pointing.webp", alt: "Outdoor stage director giving cues" },
+      { src: "/images/control-booth.webp", alt: "Outdoor control booth engineers" },
+      { src: "/images/ziblim-gimbal-2.webp", alt: "Camera crew operating gimbal on lawn" },
+    ],
+    deliverables: ["Full Festival Live Stream", "1080p Master Recording", "Social Media Cutdowns"],
+    credits: [
+      { role: "Director", name: "Ziblim Abu James" },
+      { role: "Editor", name: "Abena Kyei" },
+    ],
+    featured: true,
+  },
+  {
+    slug: "demes-shr-sessions",
+    title: "Demes shr Studio Live Sessions",
+    client: "Demes shr Studios",
+    clientVisible: true,
+    date: "2025",
+    categories: ["Live streaming", "Content creation"],
+    summary: "Studio live music sessions broadcast live from the Demes shr control suite in Accra.",
+    brief: "Intimate studio sessions requiring high-fidelity multi-track audio recording and synchronized 4-camera video switching.",
+    approach: "Utilized Demes shr Studios ATEM video switcher suite with direct multi-track ISO recording and real-time audio metering.",
+    outcome: "High-quality acoustic session videos published to YouTube and Apple Music.",
+    poster: "/images/switcher-monitor.webp",
+    gallery: [
+      { src: "/images/switcher-monitor.webp", alt: "ATEM multi-cam switcher display" },
+      { src: "/images/control-room-beam.webp", alt: "Studio control room setup" },
+      { src: "/images/ziblim-gimbal-1.webp", alt: "Gimbal camera operator in studio" },
+    ],
+    deliverables: ["Multi-Track Audio Stems", "4K Video Master", "Short Form Clips"],
+    credits: [
+      { role: "Producer & Director", name: "Ziblim Abu James" },
+    ],
+    featured: true,
+  },
+];

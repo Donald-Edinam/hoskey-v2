@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { HeadRow } from "@/components/ui/HeadRow";
@@ -40,9 +41,33 @@ export function StudiosSection({ tags = DEFAULT_TAGS }: StudiosSectionProps) {
         </div>
 
         <div className="shots">
-          <Frame ratio="r169" label="The room" />
-          <Frame ratio="r169" label="Booth" />
-          <Frame ratio="r169" label="Desk" />
+          <Frame ratio="r169" label="Live Control Room">
+            <Image
+              src="/images/control-room-beam.webp"
+              alt="Demes shr Studios live switching control room"
+              fill
+              sizes="(max-width: 768px) 100vw, 600px"
+              className="object-cover"
+            />
+          </Frame>
+          <Frame ratio="r169" label="ATEM Switcher Suite">
+            <Image
+              src="/images/switcher-monitor.webp"
+              alt="Multi-camera ATEM video switcher monitor"
+              fill
+              sizes="(max-width: 768px) 100vw, 300px"
+              className="object-cover"
+            />
+          </Frame>
+          <Frame ratio="r169" label="Outdoor Control Booth">
+            <Image
+              src="/images/control-booth.webp"
+              alt="Outdoor production control booth"
+              fill
+              sizes="(max-width: 768px) 100vw, 300px"
+              className="object-cover"
+            />
+          </Frame>
         </div>
 
         <div className="hero__cta mt-9">
