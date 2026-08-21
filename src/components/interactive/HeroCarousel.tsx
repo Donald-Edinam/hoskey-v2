@@ -137,9 +137,35 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       aria-label="What Hoskey does"
-      className="outline-none"
+      className="outline-none relative"
     >
-      <div className="hero__grid">
+      {/* Full-Bleed Ambient Media Background Overlay */}
+      <div className="absolute -inset-x-[15vw] -top-[200px] -bottom-[120px] z-0 pointer-events-none overflow-hidden transition-opacity duration-1000">
+        {currentSlide.videoSrc ? (
+          <video
+            key={currentSlide.videoSrc}
+            src={currentSlide.videoSrc}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover scale-105 opacity-55 filter blur-lg transition-all duration-1000"
+          />
+        ) : currentSlide.imageSrc ? (
+          <Image
+            key={currentSlide.imageSrc}
+            src={currentSlide.imageSrc}
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover scale-105 opacity-55 filter blur-lg transition-all duration-1000"
+          />
+        ) : null}
+        {/* Vignetting gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--dark)] via-[var(--dark)]/50 to-[var(--dark)]/70" />
+      </div>
+
+      <div className="hero__grid relative z-10">
         <div className="stack">
           <span className="word word--top" data-w1>
             {currentSlide.wordTop}
@@ -199,7 +225,7 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
       </div>
 
       {/* Counter & Pause Controls */}
-      <div className="counter">
+      <div className="counter relative z-10">
         <button
           className="cbtn"
           type="button"
