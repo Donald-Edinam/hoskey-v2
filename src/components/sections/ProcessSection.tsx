@@ -20,7 +20,7 @@ export function ProcessSection() {
             The result is only as good as what happens before the camera rolls. We take both seriously.
           </p>
           <div className="hero__cta style-cta">
-            <Button variant="line" href="/#contact">
+            <Button variant="line" href="/contact">
               Talk through a brief
             </Button>
           </div>

@@ -13,11 +13,11 @@ export interface HeaderProps {
 }
 
 const BASE_NAV_LINKS = [
-  { label: "Home", href: "/#top" },
-  { label: "What we do", href: "/#services" },
-  { label: "Our work", href: "/#work" },
-  { label: "The studios", href: "/#studios" },
-  { label: "Let's talk", href: "/#contact" },
+  { label: "Home", href: "/" },
+  { label: "What we do", href: "/services" },
+  { label: "Our work", href: "/work" },
+  { label: "The studios", href: "/studios" },
+  { label: "Let's talk", href: "/contact" },
 ];
 
 export async function Header({
@@ -47,7 +47,10 @@ export async function Header({
         <Mark />
         <nav className="nav" aria-label="Primary">
           {navLinks.map((link) => {
-            const isActive = activePath === link.href || (link.href === "/#top" && activePath === "/");
+            const isActive =
+              activePath === link.href ||
+              (link.href !== "/" && activePath?.startsWith(link.href));
+
             return (
               <Link
                 key={link.href}

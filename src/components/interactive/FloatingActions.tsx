@@ -5,25 +5,40 @@ import { waLink } from "@/lib/whatsapp";
 
 export function FloatingActions() {
   const [hideWa, setHideWa] = useState(false);
+  const [showFab, setShowFab] = useState(false);
 
   useEffect(() => {
+    // 1. Hide WhatsApp button when #contact section is visible
     const contactSec = document.getElementById("contact");
-    if (!contactSec) return;
+    let observer: IntersectionObserver | null = null;
+    if (contactSec) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          const entry = entries[0];
+          if (entry) {
+            setHideWa(entry.isIntersecting);
+          }
+        },
+        { threshold: 0.1 }
+      );
+      observer.observe(contactSec);
+    }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry) {
-          setHideWa(entry.isIntersecting);
-        }
-      },
-      { threshold: 0.1 }
-    );
+    // 2. Show FAB only when user has scrolled down past 400px
+    const handleScroll = () => {
+      if (window.scrollY > 400) {
+        setShowFab(true);
+      } else {
+        setShowFab(false);
+      }
+    };
 
-    observer.observe(contactSec);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Initial check
 
     return () => {
-      observer.disconnect();
+      if (observer) observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -47,16 +62,18 @@ export function FloatingActions() {
         </a>
       )}
 
-      <button
-        className="fab"
-        type="button"
-        aria-label="Back to top"
-        onClick={scrollToTop}
-      >
-        <svg viewBox="0 0 24 24">
-          <path d="M12 4l8 8h-5v8h-6v-8H4z" />
-        </svg>
-      </button>
+      {showFab && (
+        <button
+          className="fab"
+          type="button"
+          aria-label="Back to top"
+          onClick={scrollToTop}
+        >
+          <svg viewBox="0 0 24 24">
+            <path d="M12 4l8 8h-5v8h-6v-8H4z" />
+          </svg>
+        </button>
+      )}
     </>
   );
 }
