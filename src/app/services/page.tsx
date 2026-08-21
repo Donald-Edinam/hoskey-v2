@@ -20,7 +20,7 @@ import {
 import { getServices } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "What We Do — Hoskey Production",
+  title: "What We Do - Hoskey Production",
   description:
     "Explore our 6 primary production services in Ghana: Television broadcast, commercial video, multi-camera live streaming, post-production, content creation, and technical stage setups.",
 };

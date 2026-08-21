@@ -15,7 +15,7 @@ export default function NotFound() {
       <main id="main" className="flex-1">
         <Section variant="default" className="min-h-[70vh] flex items-center">
           <Container>
-            <Eyebrow>404 — Page Not Found</Eyebrow>
+            <Eyebrow>404 - Page Not Found</Eyebrow>
             <Display as="h1">
               This page <em>does not exist.</em>
             </Display>

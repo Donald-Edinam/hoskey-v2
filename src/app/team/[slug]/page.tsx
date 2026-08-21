@@ -27,16 +27,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const team = await getTeam();
 
   if (team.length < 4) {
-    return { title: "Team Member Not Found — Hoskey Production" };
+    return { title: "Team Member Not Found - Hoskey Production" };
   }
 
   const member = team.find((m) => m.slug === slug);
   if (!member || !member.bio) {
-    return { title: "Team Member Not Found — Hoskey Production" };
+    return { title: "Team Member Not Found - Hoskey Production" };
   }
 
   return {
-    title: `${member.name} — ${member.role} — Hoskey Production`,
+    title: `${member.name} - ${member.role} - Hoskey Production`,
     description: member.bio,
   };
 }

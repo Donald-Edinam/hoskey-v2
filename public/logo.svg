@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" fill="none">
+  <defs>
+    <linearGradient id="blueGradFull" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A75FF" />
+      <stop offset="100%" stop-color="#0055CC" />
+    </linearGradient>
+    <linearGradient id="redGradFull" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF1A40" />
+      <stop offset="100%" stop-color="#CC0022" />
+    </linearGradient>
+    <linearGradient id="greenGradFull" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D95A" />
+      <stop offset="100%" stop-color="#008C3E" />
+    </linearGradient>
+  </defs>
+
+  <!-- LOGOMARK GROUP -->
+  <g transform="translate(10, 10)">
+    <!-- Blue Vertical Stem & Horizontal Connector -->
+    <path
+      d="M 20 15 C 17.8 15 16 16.8 16 19 L 16 131 C 16 133.2 17.8 135 20 135 L 40 135 C 42.2 135 44 133.2 44 131 L 44 85 L 68 85 C 70.2 85 72 83.2 72 81 L 72 65 C 72 62.8 70.2 61 68 61 L 44 61 L 44 19 C 44 16.8 42.2 15 40 15 Z"
+      fill="url(#blueGradFull)"
+    />
+
+    <!-- Green Base Bar -->
+    <path
+      d="M 46 101 L 115 101 C 119 101 122 104 122 108 L 122 128 C 122 132 119 135 115 135 L 46 135 Z"
+      fill="url(#greenGradFull)"
+    />
+
+    <!-- Red Play Button Triangle -->
+    <path
+      d="M 46 25 C 46 20 51 17 55 20 L 118 64 C 122 67 122 73 118 76 L 55 120 C 51 123 46 120 46 115 Z"
+      fill="url(#redGradFull)"
+    />
+  </g>
+
+  <!-- TYPOGRAPHY GROUP (White text on transparent background) -->
+  <g fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif">
+    <!-- HOSKEY -->
+    <text x="160" y="65" font-size="52" font-weight="900" letter-spacing="0.06em">HOSKEY</text>
+    
+    <!-- PRODUCTION -->
+    <text x="160" y="105" font-size="34" font-weight="800" letter-spacing="0.08em">PRODUCTION</text>
+    
+    <!-- COMPANY LIMITED -->
+    <text x="160" y="135" font-size="24" font-weight="700" letter-spacing="0.06em">COMPANY LIMITED</text>
+  </g>
+
+  <!-- TAGLINE GROUP (CAPTURE. CREATE. INSPIRE.) -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" letter-spacing="0.18em">
+    <text x="50" y="178" fill="#1A75FF">CAPTURE.</text>
+    <text x="190" y="178" fill="#00D95A">CREATE.</text>
+    <text x="310" y="178" fill="#FF1A40">INSPIRE.</text>
+  </g>
+</svg>

@@ -20,7 +20,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   const categoryTitle = category ? `${category.charAt(0).toUpperCase() + category.slice(1)} Productions` : "Selected Work";
 
   return {
-    title: `${categoryTitle} — Hoskey Production`,
+    title: `${categoryTitle} - Hoskey Production`,
     description: "Browse our portfolio of broadcast programming, television shows, commercials, and brand films in Ghana.",
   };
 }

@@ -4,7 +4,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     wordTop: "Brand",
     wordBottom: "Films",
-    lede: "Television, brand films, documentaries and live broadcasts — from concept development through to final delivery.",
+    lede: "Television, brand films, documentaries and live broadcasts - from concept development through to final delivery.",
     ctaLabel: "Start a project",
     ctaContext: "project",
   },
@@ -18,7 +18,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     wordTop: "The",
     wordBottom: "Studios",
-    lede: "Podcast and recording studio, co-working and workshop space — bookable by the hour or by the day.",
+    lede: "Podcast and recording studio, co-working and workshop space - bookable by the hour or by the day.",
     ctaLabel: "Book studio time",
     ctaContext: "studio",
   },

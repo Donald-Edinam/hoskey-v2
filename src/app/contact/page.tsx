@@ -12,7 +12,7 @@ import { waLink } from "@/lib/whatsapp";
 import { SITE } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Let's Talk — Contact Hoskey Production",
+  title: "Let's Talk - Contact Hoskey Production",
   description:
     "Get in touch with Hoskey Production in Ghana. Message us on WhatsApp, call directly, or submit a brief. Same-day reply expectation.",
 };
@@ -52,7 +52,7 @@ export default async function ContactPage() {
             <HeadRow
               eyebrow="Let's talk"
               heading={<Display>Have something worth making? <em>Bring it to us.</em></Display>}
-              lede="Tell us what you're planning — a shoot, a stream, a programme, a studio session. We usually reply the same day."
+              lede="Tell us what you're planning - a shoot, a stream, a programme, a studio session. We usually reply the same day."
               split
             />
 

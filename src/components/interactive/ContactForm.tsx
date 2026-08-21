@@ -138,7 +138,7 @@ export function ContactForm() {
       }
     } catch {
       setStatus("error");
-      setErrorMessage("Something went wrong while preparing your message. Your entered details have been preserved below — you can retry or message us directly on WhatsApp.");
+      setErrorMessage("Something went wrong while preparing your message. Your entered details have been preserved below - you can retry or message us directly on WhatsApp.");
     }
   };
 
@@ -294,7 +294,7 @@ export function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           onFocus={handleFocus}
-          placeholder="Tell us what you're planning — dates, location, deliverables..."
+          placeholder="Tell us what you're planning - dates, location, deliverables..."
           className="w-full bg-transparent border-b border-[var(--ink-3)] focus:border-[var(--ink)] py-3 text-base text-[var(--ink)] outline-none transition-colors rounded-none resize-y placeholder:text-[var(--ink-3)]/60"
         />
       </div>

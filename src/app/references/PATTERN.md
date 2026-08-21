@@ -1,4 +1,4 @@
-# PATTERNS — the five repeating shapes
+# PATTERNS - the five repeating shapes
 
 Every page assembles from these. Build each once in M1, then import. If a
 milestone seems to need a sixth, stop and say so rather than inventing one.
@@ -11,7 +11,7 @@ The workhorse. Services, and anywhere a set of peers needs equal weight.
 
 White on warm paper. Padding `clamp(28px,3vw,42px)`. **No shadow, no border,
 no radius.** Separation comes from the value difference between `--card` and
-`--paper` alone — that restraint is the whole effect.
+`--paper` alone - that restraint is the whole effect.
 
 Anatomy: monoline icon (56px, `stroke:var(--ink-3)`, `stroke-width:1.4`,
 56px reserved height, 26px bottom margin) → `h3` → one or two lines of
@@ -19,7 +19,7 @@ Anatomy: monoline icon (56px, `stroke:var(--ink-3)`, `stroke-width:1.4`,
 
 Grid: 1 col → 2 at 640px → 3 at 1040px, gap `clamp(14px,1.6vw,22px)`.
 
-**Rules.** Icons are line art only — never filled, never coloured, never
+**Rules.** Icons are line art only - never filled, never coloured, never
 brand-red. Copy stays to two lines; if it needs three, the card is doing too
 much.
 
@@ -29,7 +29,7 @@ much.
 
 ## 2. The split-type hero
 
-The signature. A giant word, an image plate, a giant word — the plate sits
+The signature. A giant word, an image plate, a giant word - the plate sits
 between them so the type appears to wrap around it.
 
 ```
@@ -47,7 +47,7 @@ Brand                    ← .word--top,  left-aligned
 - Counter below: `‹` · `01` · progress track · `03` · pause · `›`
 
 Each carousel slide swaps both words, the lede, and the CTA. Word pairs stay
-short — two syllables each, or the scale breaks at 320px.
+short - two syllables each, or the scale breaks at 320px.
 
 **Used by:** M4/S2.
 
@@ -58,7 +58,7 @@ short — two syllables each, or the scale breaks at 320px.
 Punctuation. Full-width `--dark` section breaking up the warm paper.
 
 Used at three points on the homepage: the marquee, Studios, and the closing
-CTA. **Never two in a row** — they only work as contrast.
+CTA. **Never two in a row** - they only work as contrast.
 
 Inside a dark band everything inverts by cascade: eyebrow, lede, rules,
 frames, `<em>` → `--navy-lift`, and `.btn--line` picks up a white border.
@@ -75,13 +75,13 @@ The placeholder for every missing asset.
 
 Warm grey fill (`linear-gradient(150deg,#e6e4df,#dedbd5)`) with a 45°
 repeating hairline texture at 3% ink, sharp corners, and a small uppercase
-label bottom-left naming what belongs there — `Showreel — 01:30`,
+label bottom-left naming what belongs there - `Showreel - 01:30`,
 `Project 01`, `The room`, `On set`. Inverts to the dark gradient inside a
 dark band.
 
 Ratio helpers: `r169`, `r43`, `r45`, `r11`.
 
-Accepts children, so a real image later occupies the identical box — swapping
+Accepts children, so a real image later occupies the identical box - swapping
 causes zero layout shift.
 
 **It must read as intentional, not broken.** The client should see the gap and

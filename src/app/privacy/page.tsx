@@ -7,7 +7,7 @@ import { HeadRow } from "@/components/ui/HeadRow";
 import { Display, Heading, Body } from "@/components/ui/Typography";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Hoskey Production",
+  title: "Privacy Policy - Hoskey Production",
   description: "Privacy policy for Hoskey Production in accordance with the Ghana Data Protection Act 2012 (Act 843).",
 };
 

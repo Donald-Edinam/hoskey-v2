@@ -15,7 +15,7 @@ import { SITE } from "@/lib/config";
 import { getStudioFacilities, getStudioSpaces } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Demes shr Studios — Podcast, Recording & Co-Working Space Ghana",
+  title: "Demes shr Studios - Podcast, Recording & Co-Working Space Ghana",
   description:
     "Demes shr Studios by Hoskey Production. Bookable podcast studio, recording booth, co-working desks, and workshop space in Ghana.",
 };
@@ -28,7 +28,7 @@ export default async function StudiosPage() {
   const localBusinessSchema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Demes shr Studios — Hoskey Production",
+    name: "Demes shr Studios - Hoskey Production",
     description: "Podcast studio, recording booth, co-working space and workshop venue in Ghana.",
     telephone: SITE.phone,
     url: `${SITE.url}/studios`,
@@ -63,7 +63,7 @@ export default async function StudiosPage() {
             <HeadRow
               eyebrow="Demes shr Studios"
               heading={<Display>Create. Capture. <em>Inspire.</em></Display>}
-              lede="Podcast and recording studio, co-working and workshop space — bookable by the hour or by the day."
+              lede="Podcast and recording studio, co-working and workshop space - bookable by the hour or by the day."
               split
             />
           </Container>

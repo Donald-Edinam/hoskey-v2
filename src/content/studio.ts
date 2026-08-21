@@ -44,8 +44,8 @@ export const STUDIO_FACILITIES: StudioFacility[] = [
 export const STUDIO_SPACES: StudioSpace[] = [
   {
     slug: "demes-shr-studios",
-    name: "Demes shr Studios — Main Suite",
-    description: "Podcast and recording studio, co-working and workshop space — bookable by the hour or by the day.",
+    name: "Demes shr Studios - Main Suite",
+    description: "Podcast and recording studio, co-working and workshop space - bookable by the hour or by the day.",
     capacity: 12,
     minimumHours: 2,
     included: STUDIO_TAGS,

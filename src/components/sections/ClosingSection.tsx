@@ -20,7 +20,7 @@ export function ClosingSection({ className = "" }: ClosingSectionProps) {
           Have something worth making? <em>Bring it to us.</em>
         </Display>
         <Lede className="mx-auto mt-6">
-          Tell us what you&apos;re planning — a shoot, a stream, a programme, a studio session. We usually reply the same day.
+          Tell us what you&apos;re planning - a shoot, a stream, a programme, a studio session. We usually reply the same day.
         </Lede>
         <div className="cta__row">
           <Button variant="red" href={waLink("project")}>

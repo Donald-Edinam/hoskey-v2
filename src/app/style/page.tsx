@@ -24,7 +24,7 @@ import { Rise } from "@/components/interactive/Rise";
 import { waLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Design System & Primitives — Hoskey Production",
+  title: "Design System & Primitives - Hoskey Production",
   robots: {
     index: false,
     follow: false,
@@ -49,7 +49,7 @@ export default function StyleGuidePage() {
         <Container>
           <Eyebrow>Client Design Review</Eyebrow>
           <Display as="h1">
-            Visual Language v5 — <em>Style Guide &amp; Primitives</em>.
+            Visual Language v5 - <em>Style Guide &amp; Primitives</em>.
           </Display>
           <Lede className="mt-4">
             Living proof of every primitive, token, variant, and contrast ratio. Zero-radius editorial baseline.
@@ -103,13 +103,13 @@ export default function StyleGuidePage() {
             <div>
               <Label className="block text-[var(--ink-3)] mb-2">Lede Paragraph</Label>
               <Lede>
-                Television, brand films, documentaries and live broadcasts — from concept development through to final delivery.
+                Television, brand films, documentaries and live broadcasts - from concept development through to final delivery.
               </Lede>
             </div>
             <div>
               <Label className="block text-[var(--ink-3)] mb-2">Body Text</Label>
               <Body>
-                Hoskey Production was founded on 1 December 2024 by Ziblim Abu James — known as Demes shr — in a small community with a big ambition.
+                Hoskey Production was founded on 1 December 2024 by Ziblim Abu James - known as Demes shr - in a small community with a big ambition.
               </Body>
             </div>
           </div>

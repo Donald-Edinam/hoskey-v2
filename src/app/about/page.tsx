@@ -13,7 +13,7 @@ import { ClosingSection } from "@/components/sections/ClosingSection";
 import { getAboutContent, getTimeline } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Our Story & Principles — Hoskey Production",
+  title: "Our Story & Principles - Hoskey Production",
   description:
     "Founded on 1 December 2024 by Ziblim Abu James (Demes shr) in Ghana. Built to elevate television broadcast, video production, and storytelling standards.",
 };
@@ -112,7 +112,7 @@ export default async function AboutPage() {
                 {about.vision}
               </Heading>
               <p className="mt-2 text-xs text-[var(--ink-3)] font-mono">
-                * Note: Rewritten from source text for clarity — pending client sign-off.
+                * Note: Rewritten from source text for clarity - pending client sign-off.
               </p>
             </div>
           </Container>

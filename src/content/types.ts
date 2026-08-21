@@ -79,7 +79,7 @@ export type StudioSpace = {
 export type Testimonial = {
   quote: string;
   name: string;
-  organisation: string; // REQUIRED — unattributed quotes are worthless
+  organisation: string; // REQUIRED - unattributed quotes are worthless
   role?: string;
   photo?: string;
 };

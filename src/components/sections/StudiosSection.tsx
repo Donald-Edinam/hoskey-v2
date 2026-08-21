@@ -27,7 +27,7 @@ export function StudiosSection({ tags = DEFAULT_TAGS }: StudiosSectionProps) {
         <HeadRow
           eyebrow="Demes shr Studios"
           heading={<Display>A room where <em>ideas get made.</em></Display>}
-          lede="Podcast and recording studio, co-working and workshop space — bookable by the hour or by the day."
+          lede="Podcast and recording studio, co-working and workshop space - bookable by the hour or by the day."
           split
         />
 

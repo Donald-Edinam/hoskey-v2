@@ -2,7 +2,7 @@
 
 :root {
   /* surfaces */
-  --paper: #f1f0ec;      /* warm off-white — the dominant surface */
+  --paper: #f1f0ec;      /* warm off-white - the dominant surface */
   --card: #ffffff;
   --dark: #0d0c0b;       /* near-black bands */
   --dark-2: #161412;
@@ -14,7 +14,12 @@
   --on-dark: #f4f3f1;
   --on-dark-2: #9d9892;
 
-  /* brand — client's own two colours */
+  /* brand - client's logo colors */
+  --brand-blue: #0066FF;
+  --brand-green: #00B050;
+  --brand-red: #E5002B;
+
+  /* brand - client's own two colours */
   --navy: #14306b;       /* logomark. 11.06:1 on paper. HEADING EMPHASIS */
   --red: #d8232a;        /* wordmark.  4.39:1 on paper. ACTIONS ONLY */
   --navy-lift: #5b87e8;  /* navy readable on dark bands */
@@ -239,18 +244,14 @@ em {
 }
 
 .mark {
-  width: 46px;
-  height: 46px;
-  border-radius: 50% !important;
-  background: #fff;
-  color: var(--ink);
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-  font-size: 19px;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   flex: none;
-  letter-spacing: -.03em;
 }
 
 .nav {

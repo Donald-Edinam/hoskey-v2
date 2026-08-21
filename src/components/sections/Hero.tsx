@@ -19,7 +19,7 @@ export function Hero({ slides }: HeroProps) {
     >
       <Badge />
       <Container>
-        <Eyebrow>Broadcast &amp; media production — Ghana</Eyebrow>
+        <Eyebrow>Broadcast &amp; media production - Ghana</Eyebrow>
         <HeroCarousel slides={slides} />
       </Container>
     </section>

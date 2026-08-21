@@ -20,13 +20,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Hoskey Production — Where Stories Come Alive",
-    template: "%s — Hoskey Production",
+    default: "Hoskey Production - Where Stories Come Alive",
+    template: "%s - Hoskey Production",
   },
   description:
     "Hoskey Production is a broadcast and media production company in Ghana. Television, video, live streaming, post-production and studio facilities.",
   openGraph: {
-    title: "Hoskey Production — Where Stories Come Alive",
+    title: "Hoskey Production - Where Stories Come Alive",
     description:
       "Broadcast and media production company in Ghana. Television, video, live streaming, post-production and studio facilities.",
     url: SITE.url,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hoskey Production — Where Stories Come Alive",
+    title: "Hoskey Production - Where Stories Come Alive",
     description:
       "Broadcast and media production company in Ghana. Television, video, live streaming, post-production and studio facilities.",
   },

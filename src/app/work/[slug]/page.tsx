@@ -28,14 +28,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const project = await getProject(slug);
 
   if (!project) {
-    return { title: "Case Study Not Found — Hoskey Production" };
+    return { title: "Case Study Not Found - Hoskey Production" };
   }
 
   return {
-    title: `${project.title} — Hoskey Production`,
+    title: `${project.title} - Hoskey Production`,
     description: project.summary,
     openGraph: {
-      title: `${project.title} — Hoskey Production`,
+      title: `${project.title} - Hoskey Production`,
       description: project.summary,
       type: "article",
     },

@@ -13,7 +13,7 @@ import { ClosingSection } from "@/components/sections/ClosingSection";
 import { getTeam } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Our Team — Hoskey Production",
+  title: "Our Team - Hoskey Production",
   description: "Meet the broadcast directors, producers, sound engineers, and creative crew at Hoskey Production in Ghana.",
 };
 

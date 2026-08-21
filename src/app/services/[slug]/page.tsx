@@ -32,14 +32,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const service = await getService(slug);
 
   if (!service) {
-    return { title: "Service Not Found — Hoskey Production" };
+    return { title: "Service Not Found - Hoskey Production" };
   }
 
   return {
-    title: `${service.title} — Hoskey Production`,
+    title: `${service.title} - Hoskey Production`,
     description: service.summary,
     openGraph: {
-      title: `${service.title} — Hoskey Production`,
+      title: `${service.title} - Hoskey Production`,
       description: service.summary,
     },
   };

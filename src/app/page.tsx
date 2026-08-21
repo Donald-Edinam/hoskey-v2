@@ -24,7 +24,7 @@ import {
 } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Hoskey Production — Where Stories Come Alive",
+  title: "Hoskey Production - Where Stories Come Alive",
   description:
     "Hoskey Production is a broadcast and media production company in Ghana. Television, video, live streaming, post-production and studio facilities.",
 };

@@ -7,7 +7,7 @@ import { HeadRow } from "@/components/ui/HeadRow";
 import { Display, Heading, Body } from "@/components/ui/Typography";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Hoskey Production",
+  title: "Terms of Service - Hoskey Production",
   description: "Terms and conditions governing broadcast production services and studio bookings at Hoskey Production.",
 };
 

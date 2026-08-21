@@ -14,7 +14,7 @@ export interface StorySectionProps {
 
 export function StorySection({ story }: StorySectionProps) {
   const paragraphs = story?.paragraphs || [
-    "Hoskey Production was founded on 1 December 2024 by Ziblim Abu James — known as Demes shr — in a small community with a big ambition: to bring professional broadcast production to every corner of the media landscape.",
+    "Hoskey Production was founded on 1 December 2024 by Ziblim Abu James - known as Demes shr - in a small community with a big ambition: to bring professional broadcast production to every corner of the media landscape.",
     "A proud Ghanaian, Ziblim grew up in the village of Walawala in the northern part of the country, where his early experiences shaped a lasting interest in storytelling. He went on to study at Unimac IFT before establishing Hoskey.",
   ];
   const byline = story?.byline || { name: "Ziblim Abu James", role: "Founder & Creative Director" };

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <!-- Linear Gradients for subtle 3D metallic depth matching client original -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A75FF" />
+      <stop offset="100%" stop-color="#0055CC" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF1A40" />
+      <stop offset="100%" stop-color="#CC0022" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D95A" />
+      <stop offset="100%" stop-color="#008C3E" />
+    </linearGradient>
+  </defs>
+
+  <!-- Blue Vertical Stem & Horizontal Connector (Left of H) -->
+  <path
+    d="M 16 10 C 13.8 10 12 11.8 12 14 L 12 86 C 12 88.2 13.8 90 16 90 L 32 90 C 34.2 90 36 88.2 36 86 L 36 54 L 52 54 C 54.2 54 56 52.2 56 50 L 56 38 C 56 35.8 54.2 34 52 34 L 36 34 L 36 14 C 36 11.8 34.2 10 32 10 Z"
+    fill="url(#blueGrad)"
+  />
+
+  <!-- Green Base Bar (Bottom of H) -->
+  <path
+    d="M 38 66 L 82 66 C 85.3 66 88 68.7 88 72 L 88 84 C 88 87.3 85.3 90 82 90 L 38 90 Z"
+    fill="url(#greenGrad)"
+  />
+
+  <!-- Red Rounded Play Button Triangle (Center Right of H) -->
+  <path
+    d="M 38 18.5 C 38 15 42 13 45 15 L 85 43.5 C 88 45.5 88 50.5 85 52.5 L 45 81 C 42 83 38 81 38 77.5 Z"
+    fill="url(#redGrad)"
+  />
+</svg>

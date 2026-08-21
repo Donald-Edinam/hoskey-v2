@@ -1,11 +1,11 @@
-# HeroUI — narrow by design
+# HeroUI - narrow by design
 
 ## Honest position
 
 v5 is a warm editorial design built from flat cards and sharp corners. It needs
 very little component library. HeroUI stays in the stack because it earns its place in
 three specific spots and will earn more in Phase 3 (booking flow). It is not
-the design system — `00-CONTEXT.md` is.
+the design system - `00-CONTEXT.md` is.
 
 **Verify before you use.** Check
 `https://heroui.com/en/docs/react/components` for real component names and
@@ -26,7 +26,7 @@ Interactive → client island, smallest possible scope
 A section never becomes a client component to use one button. Extract the
 interactive part to `src/components/interactive/`.
 
-**The island list — anything else appearing in a `use client` audit needs
+**The island list - anything else appearing in a `use client` audit needs
 justification:**
 `HeroCarousel` · `MobileNav` · `Lightbox` · `WorkFilter` · `VideoFacade` ·
 `ContactForm` · `Rise` · `StickyHeader`
@@ -62,7 +62,7 @@ Map tokens in M1 so any HeroUI component inherits the brand:
 `primary → --red` (white foreground) · `background → --paper` ·
 `content1 → --card` · `focus → --navy` · **radius `none` everywhere**.
 
-Force light. No theme switcher — the dark bands are section variants, not a
+Force light. No theme switcher - the dark bands are section variants, not a
 theme.
 
 After theming, no component may pass a raw colour class. ESLint rule for it.
