@@ -20,8 +20,7 @@ export const metadata: Metadata = {
 export default async function TeamGridPage() {
   const team = await getTeam();
 
-  // S6 Gate: Route 404s below four members to prevent an almost-empty team page from damaging trust
-  if (!team || team.length < 4) {
+  if (!team || team.length === 0) {
     notFound();
   }
 

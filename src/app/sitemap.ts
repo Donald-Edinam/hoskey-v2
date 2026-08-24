@@ -21,7 +21,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
 
-  if (team && team.length >= 4) {
+  if (team && team.length > 0) {
     staticRoutes.push({ url: `${baseUrl}/team`, lastModified: now, changeFrequency: "monthly", priority: 0.6 });
   }
 
@@ -39,7 +39,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  const teamRoutes: MetadataRoute.Sitemap = (team && team.length >= 4)
+  const teamRoutes: MetadataRoute.Sitemap = (team && team.length > 0)
     ? team.filter((m) => Boolean(m.bio)).map((m) => ({
         url: `${baseUrl}/team/${m.slug}`,
         lastModified: now,

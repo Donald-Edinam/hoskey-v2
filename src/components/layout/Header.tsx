@@ -28,8 +28,7 @@ export async function Header({
   const team = await getTeam();
   const navLinks = [...BASE_NAV_LINKS];
 
-  // S6 rule: nav item and route appear and disappear together
-  if (team && team.length >= 4) {
+  if (team && team.length > 0) {
     navLinks.splice(4, 0, { label: "Team", href: "/team" });
   }
 

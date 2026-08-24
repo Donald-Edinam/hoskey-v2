@@ -18,7 +18,7 @@ export interface PageProps {
 
 export async function generateStaticParams() {
   const team = await getTeam();
-  if (team.length < 4) return [];
+  if (!team || team.length === 0) return [];
   return team.filter((m) => Boolean(m.bio)).map((m) => ({ slug: m.slug }));
 }
 
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const team = await getTeam();
 
-  if (team.length < 4) {
+  if (!team || team.length === 0) {
     return { title: "Team Member Not Found - Hoskey Production" };
   }
 
@@ -45,8 +45,7 @@ export default async function TeamMemberPage({ params }: PageProps) {
   const { slug } = await params;
   const team = await getTeam();
 
-  // S6 & S7 Gate: 404 if team < 4 or member is missing/has no bio
-  if (!team || team.length < 4) {
+  if (!team || team.length === 0) {
     notFound();
   }
 
