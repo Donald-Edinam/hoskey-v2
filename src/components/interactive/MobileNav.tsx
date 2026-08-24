@@ -17,6 +17,7 @@ export interface MobileNavProps {
 
 const DEFAULT_NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
   { label: "What we do", href: "/services" },
   { label: "Our work", href: "/work" },
   { label: "The studios", href: "/studios" },

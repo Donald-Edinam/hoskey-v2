@@ -14,6 +14,7 @@ export interface HeaderProps {
 
 const BASE_NAV_LINKS = [
   { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
   { label: "What we do", href: "/services" },
   { label: "Our work", href: "/work" },
   { label: "The studios", href: "/studios" },
@@ -29,7 +30,7 @@ export async function Header({
   const navLinks = [...BASE_NAV_LINKS];
 
   if (team && team.length > 0) {
-    navLinks.splice(4, 0, { label: "Team", href: "/team" });
+    navLinks.splice(5, 0, { label: "Team", href: "/team" });
   }
 
   return (

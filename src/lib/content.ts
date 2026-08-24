@@ -18,6 +18,7 @@ import {
   TIMELINE,
   HOSKEY_ACROSTIC,
   VALUES,
+  LOGO_STORY,
   MISSION,
   VISION,
   TimelineEntry,
@@ -89,6 +90,7 @@ export async function getAboutContent() {
     timeline: TIMELINE,
     acrostic: HOSKEY_ACROSTIC,
     values: VALUES,
+    logoStory: LOGO_STORY,
     mission: MISSION,
     vision: VISION,
   };

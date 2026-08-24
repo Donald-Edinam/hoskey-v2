@@ -9,11 +9,11 @@ export interface TimelineEntry {
 export const FOUNDER_STORY = {
   title: "Started small. Built to last.",
   paragraphs: [
-    "Hoskey Production was founded on 1 December 2024 by Ziblim Abu James - known as Demes shr - in a small community with a big ambition: to bring professional broadcast production to every corner of the media landscape.",
-    "A proud Ghanaian, Ziblim grew up in the village of Walawala in the northern part of the country, where his early experiences shaped a lasting interest in storytelling. He went on to study at Unimac IFT before establishing Hoskey.",
+    "Hoskey Production was founded on December 1, 2024 by Ziblim Abu James (known as Demes shr) in a small community with a big dream: to bring professional broadcast production to every corner of the media landscape. What started as a passionate project in a modest setting has grown into a company dedicated to creativity, innovation, and high-quality storytelling.",
+    "Ziblim Abu James grew up in the village of Walawala in northern Ghana, where his early experiences shaped his passion for storytelling. He pursued his education at Unimac IFT, honing the skills and knowledge that would fuel his creative journey to establish Hoskey Production to bring high-quality media content to audiences everywhere.",
   ],
   byline: {
-    name: "Ziblim Abu James",
+    name: "Ziblim Abu James (Demes shr)",
     role: "Founder & Creative Director",
   },
 };
@@ -46,15 +46,19 @@ export const HOSKEY_ACROSTIC: AcrosticItem[] = [
 ];
 
 export const VALUES = [
-  { title: "Honesty", description: "Authentic storytelling without pretense or synthetic fluff." },
-  { title: "Originality", description: "Distinctive content built from local perspective and high craft." },
-  { title: "Storytelling", description: "Narratives that inspire audiences and hold attention." },
-  { title: "Knowledge", description: "Empowering viewers through meaningful media." },
-  { title: "Excellence", description: "Uncompromising production standards on every shoot." },
+  { title: "Creativity", description: "Developing fresh ideas and compelling storytelling." },
+  { title: "Quality", description: "Maintaining high professional production standards." },
+  { title: "Innovation", description: "Embracing new technologies and modern media trends." },
+  { title: "Integrity", description: "Building trust through transparency and professionalism." },
+  { title: "Collaboration", description: "Working closely with clients and partners to achieve outstanding results." },
 ];
 
-export const MISSION = "To elevate Ghanaian stories and broadcast production to world-class technical and creative standards.";
+export const LOGO_STORY = {
+  title: "About The Logo",
+  motto: "Create visual stories through film — every story deserves to be seen, heard, and felt.",
+  description: "The Hoskey Production logo represents creativity, professionalism, and modern media production. At the center is the name 'Hoskey Production' in a bold, strong font showing confidence, originality, and a unique brand identity. The dark colors represent strength, authority, and seriousness in the media industry, while contrasting accents express innovation and visual storytelling.",
+};
 
-// NOTE FOR CLIENT REVIEW: The original vision source document contained scrambled syntax ("To become leading media production company...").
-// Rewritten plainly below for clarity - requires client sign-off before Phase 2 launch.
-export const VISION = "To become Ghana's most trusted broadcast and media production partner, known for technical precision, authentic storytelling, and community empowerment.";
+export const MISSION = "Our mission is to create impactful broadcast content that informs, entertains, and inspires audiences while delivering professional and innovative media solutions to our clients.";
+
+export const VISION = "Our vision is to become a leading broadcast production company recognized for creativity, quality, and excellence in storytelling across television and digital media platforms.";

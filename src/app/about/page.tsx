@@ -99,7 +99,20 @@ export default async function AboutPage() {
         {/* S4: Acrostic (Re-used shared component) */}
         <AcrosticSection acrostic={about.acrostic} />
 
-        {/* S5: Mission & Vision */}
+        {/* S5: Logo Story */}
+        <Section variant="default" id="logo">
+          <Container className="space-y-6 max-w-4xl">
+            <Eyebrow>{about.logoStory.title}</Eyebrow>
+            <Heading as="h2" className="text-2xl md:text-4xl">
+              {about.logoStory.motto}
+            </Heading>
+            <Body className="text-[var(--ink-2)] text-base md:text-lg leading-relaxed">
+              {about.logoStory.description}
+            </Body>
+          </Container>
+        </Section>
+
+        {/* S6: Mission & Vision */}
         <Section variant="card" id="mission-vision">
           <Container className="space-y-12">
             <div>
@@ -114,9 +127,6 @@ export default async function AboutPage() {
               <Heading as="h2" className="text-2xl md:text-3xl max-w-3xl">
                 {about.vision}
               </Heading>
-              <p className="mt-2 text-xs text-[var(--ink-3)] font-mono">
-                * Note: Rewritten from source text for clarity - pending client sign-off.
-              </p>
             </div>
           </Container>
         </Section>
