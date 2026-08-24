@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useLenis } from "lenis/react";
 import { Button } from "@/components/ui/Button";
 import { waLink } from "@/lib/whatsapp";
 
@@ -24,6 +25,7 @@ const DEFAULT_NAV_ITEMS: NavItem[] = [
 
 export function MobileNav({ navItems = DEFAULT_NAV_ITEMS }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const lenis = useLenis();
 
   useEffect(() => {
     if (!isOpen) return;
@@ -34,12 +36,14 @@ export function MobileNav({ navItems = DEFAULT_NAV_ITEMS }: MobileNavProps) {
 
     document.addEventListener("keydown", handleKeyDown);
     document.body.style.overflow = "hidden";
+    lenis?.stop();
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "";
+      lenis?.start();
     };
-  }, [isOpen]);
+  }, [isOpen, lenis]);
 
   return (
     <div className="min-[1000px]:hidden">

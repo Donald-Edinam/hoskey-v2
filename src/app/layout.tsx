@@ -3,6 +3,7 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/config";
 import { FloatingActions } from "@/components/interactive/FloatingActions";
+import { SmoothScroll } from "@/components/interactive/SmoothScroll";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -74,7 +75,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      data-scroll-behavior="smooth"
       className={`${figtree.variable} h-full antialiased`}
     >
       <head>
@@ -84,8 +84,10 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-[var(--paper)] text-[var(--ink)]">
-        {children}
-        <FloatingActions />
+        <SmoothScroll>
+          {children}
+          <FloatingActions />
+        </SmoothScroll>
       </body>
     </html>
   );

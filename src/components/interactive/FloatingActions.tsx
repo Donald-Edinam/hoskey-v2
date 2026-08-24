@@ -1,11 +1,19 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { useLenis } from "lenis/react";
 import { waLink } from "@/lib/whatsapp";
 
 export function FloatingActions() {
   const [hideWa, setHideWa] = useState(false);
-  const [showFab, setShowFab] = useState(false);
+  const [showFab, setShowFab] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.scrollY > 400;
+  });
+
+  const lenis = useLenis(({ scroll }) => {
+    setShowFab(scroll > 400);
+  });
 
   useEffect(() => {
     // 1. Hide WhatsApp button when #contact section is visible
@@ -24,26 +32,17 @@ export function FloatingActions() {
       observer.observe(contactSec);
     }
 
-    // 2. Show FAB only when user has scrolled down past 400px
-    const handleScroll = () => {
-      if (window.scrollY > 400) {
-        setShowFab(true);
-      } else {
-        setShowFab(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // Initial check
-
     return () => {
       if (observer) observer.disconnect();
-      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (lenis) {
+      lenis.scrollTo(0, { duration: 1.2 });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (
