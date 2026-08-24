@@ -3,6 +3,11 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Display, Body } from "@/components/ui/Typography";
 import { Frame } from "@/components/ui/Frame";
@@ -26,24 +31,32 @@ const MILESTONES = [
     tag: "Humble Roots",
     title: "Walawala, Northern Ghana",
     desc: "Growing up in a small village in Walawala, early experiences shaped a deep passion for storytelling, communication, and visual media.",
+    date: "Early Origins",
+    iconColor: "var(--navy)",
   },
   {
     step: "02",
     tag: "Higher Education",
     title: "UniMAC IFT",
     desc: "Studied media and broadcast technologies at UniMAC IFT, honing technical knowledge, multi-camera direction, and video production mastery.",
+    date: "Academic Mastery",
+    iconColor: "var(--red)",
   },
   {
     step: "03",
     tag: "Foundation",
     title: "1 December 2024",
     desc: "Founded Hoskey Production in a modest setting with a big vision: to bring world-class broadcast standards to every project across Ghana and beyond.",
+    date: "1 Dec 2024",
+    iconColor: "var(--navy-lift)",
   },
   {
     step: "04",
     tag: "Ecosystem Hub",
     title: "Demes shr Studios",
     desc: "Expanded into physical podcasting suites, recording booths, creator co-working space, workshop rooms, and multi-camera live broadcast operations.",
+    date: "Physical Expansion",
+    iconColor: "var(--red-lift)",
   },
 ] as const;
 
@@ -121,7 +134,7 @@ export function AboutStorySection({ story }: AboutStorySectionProps) {
         </div>
       </div>
 
-      {/* Executive Vertical Timeline */}
+      {/* Package-Powered Story Timeline */}
       <div className="space-y-10 pt-12 border-t border-[var(--rule)]">
         <div>
           <Eyebrow>Company Milestones</Eyebrow>
@@ -130,32 +143,47 @@ export function AboutStorySection({ story }: AboutStorySectionProps) {
           </h3>
         </div>
 
-        {/* Vertical Timeline Container */}
-        <div className="relative pl-8 md:pl-12 space-y-8 border-l-2 border-[var(--rule)] ml-4 md:ml-6">
+        <VerticalTimeline animate={false} lineColor="var(--rule)">
           {MILESTONES.map((m) => (
-            <div key={m.step} className="relative group">
-              {/* Step Node Circle on Vertical Spine */}
-              <div className="absolute -left-[41px] md:-left-[57px] top-1 w-10 h-10 rounded-full bg-[var(--card)] border-2 border-[var(--rule)] group-hover:border-[var(--red)] group-hover:bg-[var(--red)] group-hover:text-white flex items-center justify-center font-mono text-xs font-bold text-[var(--ink)] transition-all duration-300 shadow-sm z-10">
-                {m.step}
-              </div>
-
-              {/* Vertical Milestone Card */}
-              <div className="p-6 md:p-8 bg-[var(--card)] border border-[var(--rule)] group-hover:border-[var(--navy)] group-hover:shadow-md transition-all duration-300 space-y-3">
-                <span className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--red)] block">
-                  {m.tag}
+            <VerticalTimelineElement
+              key={m.step}
+              className="vertical-timeline-element--work"
+              contentStyle={{
+                background: "var(--card)",
+                color: "var(--ink)",
+                border: "1px solid var(--rule)",
+                boxShadow: "none",
+                borderRadius: "0px",
+                padding: "1.5rem 2rem",
+              }}
+              contentArrowStyle={{
+                borderRight: "7px solid var(--card)",
+              }}
+              date={m.date}
+              dateClassName="text-xs font-mono text-[var(--ink-3)] font-bold px-2"
+              iconStyle={{
+                background: m.iconColor,
+                color: "var(--on-dark)",
+                boxShadow: "none",
+              }}
+              icon={
+                <span className="flex items-center justify-center w-full h-full font-mono text-xs font-bold">
+                  {m.step}
                 </span>
-
-                <h4 className="text-xl md:text-2xl font-bold text-[var(--ink)] group-hover:text-[var(--navy)] transition-colors">
-                  {m.title}
-                </h4>
-
-                <p className="text-sm md:text-base text-[var(--ink-2)] leading-relaxed">
-                  {m.desc}
-                </p>
-              </div>
-            </div>
+              }
+            >
+              <span className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--red)] block mb-1">
+                {m.tag}
+              </span>
+              <h4 className="text-xl md:text-2xl font-bold text-[var(--ink)]">
+                {m.title}
+              </h4>
+              <p className="text-sm md:text-base text-[var(--ink-2)] leading-relaxed mt-2 !font-normal">
+                {m.desc}
+              </p>
+            </VerticalTimelineElement>
           ))}
-        </div>
+        </VerticalTimeline>
       </div>
     </div>
   );

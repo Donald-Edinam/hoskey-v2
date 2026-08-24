@@ -934,3 +934,21 @@ em {
     animation: none !important;
   }
 }
+
+/* Vertical Timeline Line Trim & Custom Styling */
+.vertical-timeline {
+  padding: 0 !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.vertical-timeline::before {
+  top: 20px !important;
+  height: calc(100% - 65px) !important;
+  background: var(--rule) !important;
+}
+
+.vertical-timeline-element-icon {
+  border-radius: 4px !important;
+}
+
