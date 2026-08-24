@@ -55,7 +55,7 @@ export const VALUES = [
 
 export const LOGO_STORY = {
   title: "About The Logo",
-  motto: "Create visual stories through film — every story deserves to be seen, heard, and felt.",
+  motto: "Create visual stories through film: every story deserves to be seen, heard, and felt.",
   description: "The Hoskey Production logo represents creativity, professionalism, and modern media production. At the center is the name 'Hoskey Production' in a bold, strong font showing confidence, originality, and a unique brand identity. The dark colors represent strength, authority, and seriousness in the media industry, while contrasting accents express innovation and visual storytelling.",
 };
 

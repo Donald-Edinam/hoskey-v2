@@ -5,23 +5,24 @@ import { Footer } from "@/components/layout/Footer";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Display, Heading, Lede, Body } from "@/components/ui/Typography";
-import { Frame } from "@/components/ui/Frame";
-import { TimelineSection } from "@/components/sections/TimelineSection";
-import { ValuesSection } from "@/components/sections/ValuesSection";
-import { AcrosticSection } from "@/components/sections/AcrosticSection";
+import { Display, Heading } from "@/components/ui/Typography";
+import { Button } from "@/components/ui/Button";
+import { AboutStorySection } from "@/components/interactive/AboutStorySection";
+import { InteractiveAcrostic } from "@/components/interactive/InteractiveAcrostic";
+import { InteractiveLogoBreakdown } from "@/components/interactive/InteractiveLogoBreakdown";
+import { InteractiveValuesGrid } from "@/components/interactive/InteractiveValuesGrid";
 import { ClosingSection } from "@/components/sections/ClosingSection";
-import { getAboutContent, getTimeline } from "@/lib/content";
+import { getAboutContent, getStudioTags } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Our Story & Principles - Hoskey Production",
+  title: "About Us & Story - Hoskey Production",
   description:
-    "Founded on 1 December 2024 by Ziblim Abu James (Demes shr) in Ghana. Built to elevate television broadcast, video production, and storytelling standards.",
+    "Discover the story of Hoskey Production, founded by Ziblim Abu James (Demes shr) on December 1, 2024. Creative broadcast production, television, live streaming, and studio facilities in Ghana.",
 };
 
 export default async function AboutPage() {
   const about = await getAboutContent();
-  const timeline = await getTimeline();
+  const studioTags = await getStudioTags();
 
   // AboutPage JSON-LD Schema
   const aboutSchema = {
@@ -38,6 +39,7 @@ export default async function AboutPage() {
         jobTitle: about.founderStory.byline.role,
       },
       foundingDate: "2024-12-01",
+      slogan: "Where Stories Come Alive",
     },
   };
 
@@ -47,86 +49,163 @@ export default async function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
       />
-      <Header isDarkHero={false} activePath="/about" />
+      <Header isDarkHero={true} activePath="/about" />
 
       <main id="main" className="flex-1">
-        {/* S1: Opening Founder Story */}
-        <Section variant="default" className="pt-[clamp(100px,12vw,140px)]">
-          <Container>
-            <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 items-start">
-              <div>
-                <Eyebrow>Our story</Eyebrow>
-                <Display>
-                  Started small. <em>Built to last.</em>
-                </Display>
-                <Lede className="mt-6">
-                  {about.founderStory.paragraphs[0]}
-                </Lede>
-                <Body className="mt-4 text-[var(--ink-2)]">
-                  {about.founderStory.paragraphs[1]}
-                </Body>
+        {/* Cinematic Dark Hero Banner */}
+        <section className="hero relative bg-[var(--dark)] text-[var(--on-dark)] pt-[clamp(120px,14vw,170px)] pb-[clamp(60px,8vw,100px)] overflow-hidden">
+          {/* Background Image with Dark Overlay */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/studio-interior.webp"
+              alt="Hoskey Studio Interior"
+              fill
+              priority
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/65 backdrop-blur-[2px]" />
+          </div>
+
+          <Container className="relative z-10">
+            <div className="max-w-4xl space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 text-xs font-mono font-bold tracking-wider text-[var(--red-lift)] uppercase">
+                <span>●</span> Our Identity & Story
               </div>
 
-              <div>
-                <Frame ratio="r45" label="Founder & Creative Director">
-                  <Image
-                    src="/images/about-founder.webp"
-                    alt="Ziblim Abu James (Demes shr)"
-                    fill
-                    sizes="(max-width: 900px) 100vw, 500px"
-                    className="object-cover"
-                  />
-                </Frame>
-                <div className="mt-4 pt-4 border-t border-[var(--rule)]">
-                  <b className="block text-base font-bold text-[var(--ink)]">
-                    {about.founderStory.byline.name}
-                  </b>
-                  <span className="text-sm text-[var(--ink-2)]">
-                    {about.founderStory.byline.role}
-                  </span>
+              <Display className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none text-white">
+                Where Vision Meets <em className="text-[var(--navy-lift)]">Voice.</em>
+              </Display>
+
+              <p className="text-base sm:text-xl text-[var(--on-dark-2)] leading-relaxed max-w-3xl">
+                Hoskey Production is a creative broadcast production company dedicated to producing high-quality visual content for television, digital platforms, and live media. We transform ideas into compelling stories through innovative technology and passionate craftsmanship.
+              </p>
+
+              <div className="pt-4 flex flex-wrap items-center gap-4">
+                <Button variant="red" href="/contact">
+                  Talk to Our Team
+                </Button>
+                <Button variant="line" href="/work">
+                  Explore Our Work
+                </Button>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* Chapter 1: The Origin Story */}
+        <Section variant="default" className="py-20">
+          <Container>
+            <AboutStorySection story={about.founderStory} />
+          </Container>
+        </Section>
+
+        {/* Chapter 2: The Acrostic Explorer */}
+        <Section variant="card" id="acrostic" className="py-20 border-y border-[var(--rule)]">
+          <Container className="space-y-10">
+            <div className="max-w-3xl space-y-3">
+              <Eyebrow>Brand Identity</Eyebrow>
+              <Heading as="h2" className="text-3xl sm:text-4xl md:text-5xl">
+                The DNA of <em>Hoskey.</em>
+              </Heading>
+              <p className="text-base text-[var(--ink-2)]">
+                The name Hoskey represents vision, voice, and connection: a platform where ideas are shared, stories are told, and communities are connected.
+              </p>
+            </div>
+
+            <InteractiveAcrostic items={about.acrostic} />
+          </Container>
+        </Section>
+
+        {/* Chapter 3: Logo Deconstruction */}
+        <Section variant="dark" id="logo" className="py-24">
+          <Container className="space-y-12">
+            <div className="max-w-3xl space-y-3">
+              <div className="text-xs font-mono font-bold text-[var(--red-lift)] uppercase tracking-widest">
+                Visual Identity
+              </div>
+              <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--on-dark)]">
+                Deconstructing The <em>Mark.</em>
+              </h2>
+              <p className="text-base text-[var(--on-dark-2)]">
+                Every element of the Hoskey Production logo was crafted to express authority, technical precision, and modern storytelling.
+              </p>
+            </div>
+
+            <InteractiveLogoBreakdown />
+          </Container>
+        </Section>
+
+        {/* Chapter 4: Core Values */}
+        <Section variant="default" id="values" className="py-24">
+          <Container className="space-y-12">
+            <div className="max-w-3xl space-y-3">
+              <Eyebrow>Core Principles</Eyebrow>
+              <Heading as="h2" className="text-3xl sm:text-5xl">
+                Guiding Our <em>Craft.</em>
+              </Heading>
+              <p className="text-base text-[var(--ink-2)]">
+                At Hoskey Production, our work is defined by five foundational values that guide every broadcast, live stream, and video shoot.
+              </p>
+            </div>
+
+            <InteractiveValuesGrid values={about.values} />
+          </Container>
+        </Section>
+
+        {/* Chapter 5: Mission & Vision Dual Hub */}
+        <Section variant="card" id="mission-vision" className="py-20 border-t border-[var(--rule)]">
+          <Container>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Mission Card */}
+              <div className="p-8 md:p-12 bg-[var(--paper)] border border-[var(--rule)] space-y-4 hover:border-[var(--navy)] transition-colors">
+                <div className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--navy)]">
+                  Our Mission
+                </div>
+                <Heading as="h3" className="text-2xl md:text-3xl leading-snug">
+                  {about.mission}
+                </Heading>
+              </div>
+
+              {/* Vision Card */}
+              <div className="p-8 md:p-12 bg-[var(--dark)] text-[var(--on-dark)] border border-[var(--rule-dark)] space-y-4 hover:border-[var(--red-lift)] transition-colors">
+                <div className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--red-lift)]">
+                  Our Vision
+                </div>
+                <h3 className="text-2xl md:text-3xl leading-snug font-bold">
+                  {about.vision}
+                </h3>
+              </div>
+            </div>
+          </Container>
+        </Section>
+
+        {/* Chapter 6: Demes shr Studios & Ecosystem */}
+        <Section variant="default" id="studios-ecosystem" className="py-20">
+          <Container>
+            <div className="p-8 md:p-14 bg-[var(--card)] border border-[var(--rule)] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+              <div className="space-y-4 max-w-2xl">
+                <Eyebrow>Studio Facilities</Eyebrow>
+                <Heading as="h3" className="text-2xl md:text-4xl">
+                  Demes shr Studios: <em>Create. Capture. Inspire.</em>
+                </Heading>
+                <p className="text-sm md:text-base text-[var(--ink-2)] leading-relaxed">
+                  Our physical production hub equipped for podcasting, voice recording, live acoustic sessions, co-working, workshops, and multi-camera broadcasts.
+                </p>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {studioTags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-[var(--paper)] text-xs font-medium border border-[var(--rule)] text-[var(--ink)]"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
-            </div>
-          </Container>
-        </Section>
 
-        {/* S2: Timeline (Code-gated: hidden below 3 entries) */}
-        <TimelineSection timeline={timeline} />
-
-        {/* S3: Values (Quiet hairline list) */}
-        <ValuesSection values={about.values} />
-
-        {/* S4: Acrostic (Re-used shared component) */}
-        <AcrosticSection acrostic={about.acrostic} />
-
-        {/* S5: Logo Story */}
-        <Section variant="default" id="logo">
-          <Container className="space-y-6 max-w-4xl">
-            <Eyebrow>{about.logoStory.title}</Eyebrow>
-            <Heading as="h2" className="text-2xl md:text-4xl">
-              {about.logoStory.motto}
-            </Heading>
-            <Body className="text-[var(--ink-2)] text-base md:text-lg leading-relaxed">
-              {about.logoStory.description}
-            </Body>
-          </Container>
-        </Section>
-
-        {/* S6: Mission & Vision */}
-        <Section variant="card" id="mission-vision">
-          <Container className="space-y-12">
-            <div>
-              <Eyebrow>Mission</Eyebrow>
-              <Heading as="h2" className="text-2xl md:text-3xl max-w-3xl">
-                {about.mission}
-              </Heading>
-            </div>
-
-            <div className="pt-12 border-t border-[var(--rule)]">
-              <Eyebrow>Vision</Eyebrow>
-              <Heading as="h2" className="text-2xl md:text-3xl max-w-3xl">
-                {about.vision}
-              </Heading>
+              <Button variant="red" href="/studios">
+                Explore Studio Spaces
+              </Button>
             </div>
           </Container>
         </Section>

@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Display, Heading, Body } from "@/components/ui/Typography";
+import { Display, Heading } from "@/components/ui/Typography";
 import { Frame } from "@/components/ui/Frame";
 import { Media } from "@/components/ui/Media";
 import { ProjectFigure } from "@/components/ui/ProjectFigure";

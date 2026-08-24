@@ -66,11 +66,11 @@ I approach my work with curiosity, discipline, and a clear purpose: to build tec
 
 My natural talent lies in problem-solving and learning by doing. I enjoy taking complex technical challenges and breaking them down into simple, reliable solutions. Whether I’m setting up computer systems, configuring AV equipment for events, or troubleshooting an IS network, I focus on three things: stability, usability, and impact. I believe that good technology should be dependable first, and intuitive second.
 
-My experience in multimedia gives me a creative edge in my technical work. I understand that systems are not just about cables, servers, and software — they are about how people experience them. From supporting audio and video setups to ensuring smooth playback and clear communication, I work to turn complicated setups into seamless experiences. This blend of technical skill and creative thinking allows me to deliver solutions that are both functional and engaging.
+My experience in multimedia gives me a creative edge in my technical work. I understand that systems are not just about cables, servers, and software; they are about how people experience them. From supporting audio and video setups to ensuring smooth playback and clear communication, I work to turn complicated setups into seamless experiences. This blend of technical skill and creative thinking allows me to deliver solutions that are both functional and engaging.
 
 I am driven by consistency. I believe that small, intentional steps taken every day lead to big results over time. That’s why I commit to continuous learning, staying updated on new tools, standards, and best practices in computer systems and AV technology. I also value collaboration and clear communication, because the best systems are built when technical teams and end-users understand each other.
 
-My purpose is to keep growing, keep improving, and use my skills to serve the people and communities around me. I want to deliver technology that is practical, dependable, and meaningful — technology that connects people, supports their work, and creates opportunities.
+My purpose is to keep growing, keep improving, and use my skills to serve the people and communities around me. I want to deliver technology that is practical, dependable, and meaningful: technology that connects people, supports their work, and creates opportunities.
 
 At the core, I am a technician who cares about the details, a problem-solver who stays calm under pressure, and a lifelong learner who is passionate about using systems and multimedia to make a positive difference.`,
   },
