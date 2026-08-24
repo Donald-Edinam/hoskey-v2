@@ -102,9 +102,9 @@ export default async function TeamMemberPage({ params }: PageProps) {
 
               <div className="mt-8 pt-8 border-t border-[var(--rule)] space-y-4">
                 <Heading as="h3">Biography</Heading>
-                <Body className="text-[var(--ink-2)] leading-relaxed">
+                <div className="space-y-4 text-[var(--ink-2)] leading-relaxed whitespace-pre-line">
                   {member.bio}
-                </Body>
+                </div>
               </div>
 
               {/* Credited Projects */}
