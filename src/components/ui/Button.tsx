@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-export type ButtonVariant = "red" | "line";
+export type ButtonVariant = "red" | "line" | "white";
 
 export interface ButtonBaseProps {
   variant?: ButtonVariant;
@@ -28,7 +28,12 @@ export function Button({
   href,
   ...props
 }: ButtonProps) {
-  const variantClass = variant === "red" ? "btn--red" : "btn--line";
+  const variantClass =
+    variant === "red"
+      ? "btn--red"
+      : variant === "white"
+      ? "btn--line border-white/40 text-white hover:bg-white hover:text-[var(--ink)]"
+      : "btn--line";
   const combinedClassName = `btn ${variantClass} ${className}`.trim();
 
   if (href !== undefined) {

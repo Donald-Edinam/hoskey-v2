@@ -215,13 +215,17 @@ em {
   color: var(--paper);
 }
 
-.sec--dark .btn--line {
+.sec--dark .btn--line,
+.hero .btn--line,
+[data-dark="true"] .btn--line {
   border-color: rgba(255, 255, 255, .4);
-  color: var(--on-dark);
+  color: #ffffff;
 }
 
-.sec--dark .btn--line:hover {
-  background: #fff;
+.sec--dark .btn--line:hover,
+.hero .btn--line:hover,
+[data-dark="true"] .btn--line:hover {
+  background: #ffffff;
   color: var(--ink);
 }
 

@@ -73,7 +73,7 @@ export default async function AboutPage() {
               </div>
 
               <Display className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none text-white">
-                Where Vision Meets <em className="text-[var(--navy-lift)]">Voice.</em>
+                Where Vision Meets <em className="text-[var(--red-lift)]">Voice.</em>
               </Display>
 
               <p className="text-base sm:text-xl text-[var(--on-dark-2)] leading-relaxed max-w-3xl">
@@ -84,7 +84,7 @@ export default async function AboutPage() {
                 <Button variant="red" href="/contact">
                   Talk to Our Team
                 </Button>
-                <Button variant="line" href="/work">
+                <Button variant="white" href="/work">
                   Explore Our Work
                 </Button>
               </div>
